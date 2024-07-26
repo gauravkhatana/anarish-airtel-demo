@@ -169,82 +169,194 @@ function ThemePanel() {
                             placeholder=" "
                           />
                         </div>
-                          <div className="col-12 mb-3">
-                            <label
-                              className={`${EmailModuleScss["label-text"]} m-auto`}
-                            >
-                              SLA:
-                            </label>
-                            <input
-                              type="text"
-                              className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                              placeholder=" "
-                            />
-                          </div>
-                          <div className="col-12 mb-3">
-                            <label
-                              className={`${EmailModuleScss["label-text"]} m-auto`}
-                            >
-                              Alarm Status:
-                            </label>
-                            <input
-                              type="text"
-                              className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                              placeholder=" "
-                            />
-                          </div>
-                          <div className="col-12 mb-3">
-                            <label
-                              className={`${EmailModuleScss["label-text"]} m-auto`}
-                            >
-                              Occurred At:
-                            </label>
-                            <input
-                              type="text"
-                              className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                              placeholder=" "
-                            />
-                          </div>
-                          <div className="col-12 mb-3">
-                            <label
-                              className={`${EmailModuleScss["label-text"]} m-auto`}
-                            >
-                              Cleared On:
-                            </label>
-                            <input
-                              type="text"
-                              className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                              placeholder=" "
-                            />
-                          </div>
-                        <div className="p-3">
-                          <div className="row">
-                            <div className="col-xl-12 mb-2">
-                              <div
-                                className={`dropdown ${EmailModuleScss["dropdown"]}`}
-                              >
+                        <div className="col-12 mb-3">
+                          <label
+                            className={`${EmailModuleScss["label-text"]} m-auto`}
+                          >
+                            SLA:
+                          </label>
+                          <input
+                            type="text"
+                            className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                            placeholder=" "
+                          />
+                        </div>
+                        <div className="col-12 mb-3">
+                          <label
+                            className={`${EmailModuleScss["label-text"]} m-auto`}
+                          >
+                            Alarm Status:
+                          </label>
+                          <input
+                            type="text"
+                            className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                            placeholder=" "
+                          />
+                        </div>
+                        <div className="col-12 mb-3">
+                          <label
+                            className={`${EmailModuleScss["label-text"]} m-auto`}
+                          >
+                            Occurred At:
+                          </label>
+                          <input
+                            type="text"
+                            className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                            placeholder=" "
+                          />
+                        </div>
+                        <div className="col-12 mb-3">
+                          <label
+                            className={`${EmailModuleScss["label-text"]} m-auto`}
+                          >
+                            Cleared On:
+                          </label>
+                          <input
+                            type="text"
+                            className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                            placeholder=" "
+                          />
+                        </div>
+
+                        <div className="col-12 mb-2">
+                          <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
                                 <button
-                                  className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
+                                  class="accordion-button"
                                   type="button"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#collapseOne"
+                                  aria-expanded="true"
+                                  aria-controls="collapseOne"
                                 >
-                                  <div
-                                    className={`${EmailModuleScss["product-info"]}`}
-                                  >
-                                    {/* <img
-                                      src="/assets/img/call-register/add-product-logo.svg"
-                                      alt=""
-                                    /> */}
-									<i class="fa-solid fa-wifi"></i>
-                                    <p mb-0> Effective Nodes</p>
+                                  <div className="circle me-2">
+                                    <i class="fa-solid fa-wifi"></i>
+                                  </div>
+                                  <div className="hd" mb-0>
+                                    {" "}
+                                    Effective Nodes
                                   </div>
                                 </button>
-                                <ul className="dropdown-menu w-100">
-                                  <li>Action</li>
-                                  <li>Another action</li>
-                                  <li>Something else here</li>
-                                </ul>
+                              </h2>
+                              <div
+                                id="collapseOne"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample"
+                              >
+                                <div class="accordion-body">
+                                  <div className="d-flex align-items-center mb-3">
+                                    <button className="circle blue me-2"></button>
+                                    <div className="hd">012367078_DSL</div>
+                                  </div>
+                                  <ul type="none">
+                                    <li className="d-flex">
+                                      <div className="circle danger me-2">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="12"
+                                          height="12"
+                                          viewBox="0 0 12 12"
+                                          fill="none"
+                                        >
+                                          <path
+                                            d="M7.65597 5.00001C8.34012 5.21317 8.98119 5.55955 9.54 6.02501M11.29 4.24999C9.82875 2.96197 7.94781 2.25131 5.99996 2.25131C5.69746 2.25131 5.39657 2.26845 5.09861 2.30223M4.26489 7.80501C4.77249 7.44439 5.37973 7.25064 6.00239 7.25064C6.62506 7.25064 7.23229 7.44439 7.73989 7.80501M6 9.75H6.005M0.59668 4.35038C1.26348 3.73935 2.0342 3.23987 2.87925 2.88153M2.36597 6.12148C3.06467 5.50599 3.92086 5.06508 4.86632 4.86696M7.84916 7.88755C7.33961 7.48813 6.69759 7.25 5.99994 7.25C5.29175 7.25 4.64086 7.49539 4.12769 7.90579M1.5 1.5L10.5 10.5"
+                                            stroke="white"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <div className="l-item d-flex align-items-center">
+                                        045215728380_wifi
+                                      </div>
+                                    </li>
+                                    <li className="d-flex">
+                                      <div className="circle danger me-2">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="12"
+                                          height="12"
+                                          viewBox="0 0 12 12"
+                                          fill="none"
+                                        >
+                                          <path
+                                            d="M7.65597 5.00001C8.34012 5.21317 8.98119 5.55955 9.54 6.02501M11.29 4.24999C9.82875 2.96197 7.94781 2.25131 5.99996 2.25131C5.69746 2.25131 5.39657 2.26845 5.09861 2.30223M4.26489 7.80501C4.77249 7.44439 5.37973 7.25064 6.00239 7.25064C6.62506 7.25064 7.23229 7.44439 7.73989 7.80501M6 9.75H6.005M0.59668 4.35038C1.26348 3.73935 2.0342 3.23987 2.87925 2.88153M2.36597 6.12148C3.06467 5.50599 3.92086 5.06508 4.86632 4.86696M7.84916 7.88755C7.33961 7.48813 6.69759 7.25 5.99994 7.25C5.29175 7.25 4.64086 7.49539 4.12769 7.90579M1.5 1.5L10.5 10.5"
+                                            stroke="white"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <div className="l-item d-flex align-items-center">
+                                        045215728380_wifi
+                                      </div>
+                                    </li>
+                                    <li className="d-flex">
+                                      <div className="circle danger me-2">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="12"
+                                          height="12"
+                                          viewBox="0 0 12 12"
+                                          fill="none"
+                                        >
+                                          <path
+                                            d="M7.65597 5.00001C8.34012 5.21317 8.98119 5.55955 9.54 6.02501M11.29 4.24999C9.82875 2.96197 7.94781 2.25131 5.99996 2.25131C5.69746 2.25131 5.39657 2.26845 5.09861 2.30223M4.26489 7.80501C4.77249 7.44439 5.37973 7.25064 6.00239 7.25064C6.62506 7.25064 7.23229 7.44439 7.73989 7.80501M6 9.75H6.005M0.59668 4.35038C1.26348 3.73935 2.0342 3.23987 2.87925 2.88153M2.36597 6.12148C3.06467 5.50599 3.92086 5.06508 4.86632 4.86696M7.84916 7.88755C7.33961 7.48813 6.69759 7.25 5.99994 7.25C5.29175 7.25 4.64086 7.49539 4.12769 7.90579M1.5 1.5L10.5 10.5"
+                                            stroke="white"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <div className="l-item d-flex align-items-center">
+                                        045215728380_wifi
+                                      </div>
+                                    </li>
+                                    <li className="d-flex">
+                                      <div className="circle danger me-2">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="12"
+                                          height="12"
+                                          viewBox="0 0 12 12"
+                                          fill="none"
+                                        >
+                                          <path
+                                            d="M7.65597 5.00001C8.34012 5.21317 8.98119 5.55955 9.54 6.02501M11.29 4.24999C9.82875 2.96197 7.94781 2.25131 5.99996 2.25131C5.69746 2.25131 5.39657 2.26845 5.09861 2.30223M4.26489 7.80501C4.77249 7.44439 5.37973 7.25064 6.00239 7.25064C6.62506 7.25064 7.23229 7.44439 7.73989 7.80501M6 9.75H6.005M0.59668 4.35038C1.26348 3.73935 2.0342 3.23987 2.87925 2.88153M2.36597 6.12148C3.06467 5.50599 3.92086 5.06508 4.86632 4.86696M7.84916 7.88755C7.33961 7.48813 6.69759 7.25 5.99994 7.25C5.29175 7.25 4.64086 7.49539 4.12769 7.90579M1.5 1.5L10.5 10.5"
+                                            stroke="white"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <div className="l-item d-flex align-items-center">
+                                        045215728380_wifi
+                                      </div>
+                                    </li>
+                                    <li className="d-flex">
+                                      <div className="circle danger me-2">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="12"
+                                          height="12"
+                                          viewBox="0 0 12 12"
+                                          fill="none"
+                                        >
+                                          <path
+                                            d="M7.65597 5.00001C8.34012 5.21317 8.98119 5.55955 9.54 6.02501M11.29 4.24999C9.82875 2.96197 7.94781 2.25131 5.99996 2.25131C5.69746 2.25131 5.39657 2.26845 5.09861 2.30223M4.26489 7.80501C4.77249 7.44439 5.37973 7.25064 6.00239 7.25064C6.62506 7.25064 7.23229 7.44439 7.73989 7.80501M6 9.75H6.005M0.59668 4.35038C1.26348 3.73935 2.0342 3.23987 2.87925 2.88153M2.36597 6.12148C3.06467 5.50599 3.92086 5.06508 4.86632 4.86696M7.84916 7.88755C7.33961 7.48813 6.69759 7.25 5.99994 7.25C5.29175 7.25 4.64086 7.49539 4.12769 7.90579M1.5 1.5L10.5 10.5"
+                                            stroke="white"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <div className="l-item d-flex align-items-center">
+                                        045215728380_wifi
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>

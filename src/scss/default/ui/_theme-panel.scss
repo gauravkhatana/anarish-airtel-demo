@@ -10,32 +10,114 @@ $theme-panel-width: _rem(400px);
 	background: var(--#{$prefix}component-bg);
 	transition: right .2s linear;
 	border-radius: $border-radius 0 0 $border-radius;
-	
+
 	@if $enable-rtl {
 		right: auto;
 		left: -$theme-panel-width;
 		transition: left .2s linear;
 	}
 
-	.form-control{
+	.form-control {
 		height: fit-content;
 	}
-	
+
+	.accordion {
+		--bs-accordion-bg: white !important;
+
+		.hd {
+			color: var(--Lara-Accordion-accordionHeaderTextActiveColor, #343A40);
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+		}
+
+		.circle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			height: 30px;
+			font-size: 16px;
+			color: white;
+			background-color: #007aff;
+			aspect-ratio: 1/1;
+
+			&.danger {
+				background-color: #F03800;
+				fill: #F03800;
+				height: 20px;
+			}
+
+			&.blue {
+				background-color: #FFFFFF;
+				border: solid 2px #007aff;
+				height: 25px;
+			}
+		}
+
+		.blue:hover {
+			background-color: #007aff;
+		}
+
+		.accordion-item {
+			.accordian.header {
+				padding: 17.5px;
+			}
+
+			ul {
+				padding-left: 20px;
+
+				li {
+					margin-bottom: 4px;
+				}
+			}
+
+			.accordion-button {
+				background-color: #F8F9FA;
+
+				&:not(.collapsed) {
+					color: var(--bs-accordion-active-color);
+					background-color: #F8F9FA;
+					box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+				}
+				&:focus {
+					box-shadow: none;
+				}
+			}
+
+			
+		}
+
+		.accordion-body {
+			padding: 7px 17px;
+
+		}
+	}
+
+	.tab-pane {
+		.col-12 {
+			padding: 0;
+		}
+	}
+
 	& .theme-list {
 		margin-bottom: _rem(-4px);
 		margin-right: _rem(-4px);
 		display: flex;
 		flex-wrap: wrap;
-		
+
 		& .theme-list-item {
 			margin-bottom: _rem(4px);
-			
+
 			@if $enable-rtl {
 				margin-left: _rem(4px);
-			} @else {
+			}
+
+			@else {
 				margin-right: _rem(4px);
 			}
-			
+
 			& .theme-list-link {
 				width: _rem(28px);
 				height: _rem(28px);
@@ -44,12 +126,13 @@ $theme-panel-width: _rem(400px);
 				position: relative;
 				border-radius: 30px;
 				transition: all .2s linear;
-				
+
 				&:hover,
 				&:focus {
 					opacity: .6;
 				}
 			}
+
 			&.active {
 				& .theme-list-link {
 					&:before {
@@ -67,9 +150,10 @@ $theme-panel-width: _rem(400px);
 						display: flex;
 						align-items: center;
 						justify-content: center;
-						
+
 						@include fontawesome();
 					}
+
 					&.bg-white {
 						&:before {
 							color: $dark;
@@ -79,6 +163,7 @@ $theme-panel-width: _rem(400px);
 			}
 		}
 	}
+
 	& .theme-collapse-btn {
 		position: absolute;
 		left: _rem(-35px);
@@ -96,16 +181,18 @@ $theme-panel-width: _rem(400px);
 		text-align: center;
 		// border-radius: $border-radius 0 0 $border-radius;
 		box-shadow: 0 0 15px 0 rgba($black, .15);
-		
+
 		@if $enable-rtl {
 			left: auto;
 			right: _rem(-30px);
 			border-radius: 0 $border-radius $border-radius 0;
 		}
+
 		@include media-breakpoint-down(sm) {
 			top: 35%;
 		}
 	}
+
 	& .theme-panel-content {
 		width: 400px;
 		background: var(--#{$prefix}component-bg);
@@ -119,22 +206,24 @@ $theme-panel-width: _rem(400px);
 		margin: 0;
 		z-index: 10;
 	}
+
 	& .theme-panel-divider {
 		height: _rem(1px);
 		margin: _rem(15px) 0;
 		background-color: var(--#{$prefix}component-border-color);
 	}
+
 	& .theme-version {
 		margin: 0 0 _rem(5px);
 		margin: -2.5px;
 		display: flex;
 		flex-wrap: wrap;
-		
+
 		& .theme-version-item {
 			width: 50%;
 			position: relative;
 			padding-top: _rem(35%);
-			
+
 			& .theme-version-link {
 				display: block;
 				text-decoration: none;
@@ -144,7 +233,7 @@ $theme-panel-width: _rem(400px);
 				right: 0;
 				bottom: 0;
 				margin: 2.5px;
-				
+
 				& .theme-version-cover {
 					font-size: _rem(14px);
 					font-weight: bold;
@@ -159,6 +248,7 @@ $theme-panel-width: _rem(400px);
 					background-repeat: no-repeat;
 					background-position: top left;
 				}
+
 				&.active,
 				&:hover {
 					&:before {
@@ -171,6 +261,7 @@ $theme-panel-width: _rem(400px);
 						top: 0;
 						z-index: 10;
 					}
+
 					&:after {
 						content: '\f00c';
 						position: absolute;
@@ -183,10 +274,11 @@ $theme-panel-width: _rem(400px);
 						line-height: _rem(16px);
 						font-size: _rem(10px);
 						text-align: center;
-					
+
 						@include fontawesome();
 					}
 				}
+
 				&.active {
 					&:before {
 						border-left-color: #007aff;
@@ -196,15 +288,18 @@ $theme-panel-width: _rem(400px);
 			}
 		}
 	}
+
 	&.active {
 		box-shadow: 0 5px 25px rgba($black, .3);
-		
+
 		@if $enable-rtl {
 			left: 0;
-		} @else {
+		}
+
+		@else {
 			right: 0;
 		}
-		
+
 		& .theme-collapse-btn {
 			& .fa {
 				&:before {
