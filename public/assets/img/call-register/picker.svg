@@ -1,0 +1,17 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="tabler:edit" clip-path="url(#clip0_3838_53012)">
+<g id="edit">
+<mask id="mask0_3838_53012" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-2" y="-2" width="24" height="24">
+<rect id="Bounding box" x="-2" y="-2" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_3838_53012)">
+<path id="edit_2" d="M3 17H4.425L14.2 7.225L12.775 5.8L3 15.575V17ZM1 19V14.75L14.2 1.575C14.4 1.39167 14.6208 1.25 14.8625 1.15C15.1042 1.05 15.3583 1 15.625 1C15.8917 1 16.15 1.05 16.4 1.15C16.65 1.25 16.8667 1.4 17.05 1.6L18.425 3C18.625 3.18333 18.7708 3.4 18.8625 3.65C18.9542 3.9 19 4.15 19 4.4C19 4.66667 18.9542 4.92083 18.8625 5.1625C18.7708 5.40417 18.625 5.625 18.425 5.825L5.25 19H1ZM13.475 6.525L12.775 5.8L14.2 7.225L13.475 6.525Z" fill="#2A295C"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_3838_53012">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>

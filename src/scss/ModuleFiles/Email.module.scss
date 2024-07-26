@@ -1,0 +1,452 @@
+.modify-button {
+	background: white;
+	text-align: center;
+	/* position: fixed; */
+	bottom: 0;
+	position: sticky;
+}
+
+.widges {
+	// box-shadow: 0px -1px 6px 0px rgba(42, 41, 92, 0.25);
+	// background-color: rgba(238, 238, 238, 0.9333333333);
+
+
+
+	.right-container {
+		align-items: center;
+		border-radius: 16px;
+		background: #FFF;
+		box-shadow: 1px 0px 6px 0px rgba(40, 56, 151, 0.45);
+		margin-left: 10px;
+	}
+
+	.box-1 {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.call-registration {
+		border-radius: 60px;
+		background: rgba(42, 41, 92, 0.15);
+		padding: 6px;
+	}
+
+	.h1-call-registration {
+		color: #2A295C;
+		font-family: "Open Sans";
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		text-transform: capitalize;
+		margin-left: 5px;
+	}
+
+	.call-logo-box {
+		display: flex;
+		width: 40px;
+		height: 40px;
+		padding: 7px;
+		align-items: flex-start;
+		gap: 10px;
+		border-radius: 60px;
+		background: rgba(42, 41, 92, 0.15);
+	}
+
+	.box-2 {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.h3-ethan-hunt {
+		color: #2A295C;
+		font-family: "Open Sans";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		text-transform: capitalize;
+	}
+
+	.box-2-img {
+		width: 24px;
+		height: 24px;
+		border-radius: 4px;
+		border: 1px solid #8891AA;
+		padding: 0;
+	}
+
+	.btn1 {
+		padding: 0;
+	}
+
+	.btn2 {
+		display: flex;
+		padding: 8px 12px;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+		border-radius: 4px;
+		border: 1px solid #283897;
+		background: #283897;
+	}
+
+
+
+	.modify-search {
+		color: #FFF;
+		text-align: center;
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 20px;
+		/* 142.857% */
+		text-transform: capitalize;
+		margin-bottom: 0px;
+	}
+
+	.entry {
+		margin-top: 20px;
+
+		p {
+			color: #2A295C;
+			font-family: "Open Sans";
+			font-size: 14px;
+
+		}
+	}
+
+	.data {
+		p {
+			color: #2A295C;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			flex: 1 0 0;
+		}
+
+	}
+}
+
+
+
+
+//my added
+.products {
+	color: #2A295C;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.enquiries1 {
+	color: #2A295C;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.top-header {
+	display: flex;
+	flex-direction: row;
+	padding-left: 15px;
+
+}
+
+.main-box-form-input {
+	// background-color: #FFFFFF;
+	margin-top: 10px;
+	display: flex;
+	padding: 12px 2px;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	align-self: stretch;
+	border-radius: 8px;
+	background: #FFF;
+	box-shadow: 1px 0px 6px 0px rgba(40, 56, 151, 0.45);
+}
+
+.add-product {
+	margin-top: 4px;
+	margin-left: 10px;
+	color: #2A295C;
+	font-family: "Open Sans";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.add-product-img {
+	margin-top: 5px;
+	width: 24px;
+	height: 24px;
+}
+
+
+
+
+
+.reset {
+	color: #2A295C;
+	text-align: center;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+.submit {
+	color: #FFF;
+	text-align: center;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.btn3 {
+	display: flex;
+	padding: 8px 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	border-radius: 4px;
+	border: 1px solid #8891AA;
+	background: #FFF;
+}
+
+.btn4 {
+	display: flex;
+	padding: 8px 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	border-radius: 4px;
+	border: 1px solid #283897;
+	background: #283897;
+	margin-left: 10px;
+}
+
+.down-buttons {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: row;
+	padding-left: 450px;
+	margin-bottom: 20px;
+	justify-content: center;
+}
+
+.label-text {
+	color: #2A295C;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+.input-value {
+	display: flex;
+	padding: 8px 12px;
+	align-items: flex-start;
+	gap: 10px;
+	flex: 1 0 0;
+	align-self: stretch;
+	border-radius: 4px;
+	border: 1px solid #8891AA;
+	background: #FFF;
+}
+
+.dropdown-toggle::after {
+	display: inline-block;
+	margin-left: .255em;
+	vertical-align: .255em;
+	content: "";
+	border-top: .3em solid;
+	border-right: .3em solid transparent;
+	border-bottom: 0;
+	border-left: .3em solid transparent;
+}
+
+.dropdown {
+	button {
+		border-radius: 4px;
+		border: 1px solid #8891AA;
+		background: #FFF;
+		color: #121C2D;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.date {
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.tabs.active {
+	background: none;
+	border-bottom: 3px solid #2A295C;
+}
+
+
+input[type="date"] {
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+		see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f073";
+	color: #555;
+	padding: 0 5px;
+
+}
+
+/* change color of symbol on hover */
+input[type="date"]:hover:after {
+	color: #bf1400;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	color: transparent;
+	background: transparent;
+
+}
+
+/* adjust increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+	z-index: 1;
+}
+
+/* adjust clear button */
+input[type="date"]::-webkit-clear-button {
+	z-index: 1;
+}
+
+
+.right {
+	padding: 0 20px;
+}
+
+
+
+
+.customer-remarks {
+	display: flex;
+	height: 58px;
+	align-items: flex-start;
+	flex: 1 0 0;
+	border-radius: 4px;
+	border: 1px solid #8891AA;
+}
+
+.product-info {
+	display: flex;
+	flex-direction: row;
+
+	p {
+		color: #2A295C;
+		font-family: "Open Sans";
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		padding-top: 2px;
+		margin-bottom: 0px;
+	}
+}
+
+.add-enquiry {
+	display: flex;
+	padding: 4px 4px 4px 5px;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	align-self: stretch;
+}
+
+.nav-tabs {
+
+	.nav-link.active {
+		color: #2A295C;
+		font-weight: 600;
+	}
+}
+
+.foot-container {
+	.footer {
+		display: flex;
+		align-items: center;
+		.line {
+			height: 2px;
+			/* Height of the horizontal line */
+			flex-grow: 1;
+			/* Lines take up available space */
+			background-color: #283897;
+			/* Line color */
+			margin: 0 15px;
+		}
+
+		.footer-image {
+			display: block;
+			/* Removes bottom space/gap */
+			max-height: 300px;
+			/* Adjust based on your preference */
+			width: auto;
+		}
+	}
+
+	.text {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-top: 0;
+	margin-bottom: 8px;
+		.p1 {
+
+			color: #283897;
+			font-family: "Open Sans";
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		.p2 {
+			color: #283897;
+			font-family: "Open Sans";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			text-transform: capitalize;
+		}
+	}
+}
+
+//end

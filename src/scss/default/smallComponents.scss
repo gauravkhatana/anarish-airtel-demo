@@ -1,0 +1,219 @@
+.key-value-crm {
+    .value-crm {
+        color: #2A295C;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .key-crm {
+        color: #2A295C;
+        font-size: 14px;
+    }
+}
+
+/* Checkbox and Radio Buttons component specific styles */
+.form-check-input:checked {
+    background-color: #283897;
+    border-color: #283897;
+}
+
+/* Checkbox and Radio Buttons component specific styles ends */
+
+.nav-tabs {
+    border-bottom: 1.5px solid #DEE0E7;
+
+    .nav-link {
+        color: #2A295C;
+        font-weight: 400;
+        font-size: 16px;
+
+        &.active {
+            border-bottom: 3px solid #2A295C;
+            background-color: transparent;
+            font-weight: 600;
+        }
+    }
+}
+
+.card {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 1px 0px 6px 0px rgba(40, 56, 151, 0.45);
+
+    .box-shadow {
+        box-shadow: 0px 4px 8px rgba(40, 56, 151, 0.10);
+    }
+}
+
+.dropdown-crms {
+    .dropdown-menu {
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #8891AA;
+        background: #FFF;
+        padding: 0px 4px;
+        overflow-y: auto;
+        max-height: 300px;
+
+        .dropdown-item {
+            color: #121C2D;
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+
+        .form-check {
+            color: #121C2D;
+            font-family: "Open Sans";
+        }
+    }
+
+    .dropdown-toggle:after {
+        border-bottom: 0;
+        border-left: .3em solid #0000;
+        border-right: .3em solid #0000;
+        border-top: .3em solid;
+        content: "";
+        display: inline-block;
+        margin-left: .255em;
+        vertical-align: .255em;
+    }
+
+    .cross-btn{
+        margin-left: 5px;
+        color: #283897;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+// This is a common element used across all elements
+label {
+    color: #121C2D;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Form mControl - Label and INput Type Component Starts */
+.form-group-crm {
+    .form-control {
+        border-radius: 4px;
+        display: flex;
+        padding: 10px 12px;
+        border: 1px solid #8891AA;
+        background: #FFF;
+    }
+
+    .form-control[type="date"] {
+        padding: 8px;
+    }
+
+    .form-control[type="time"] {
+        padding: 8px;
+        display: block;
+    }
+
+    .form-control[type="datetime-local"] {
+        display: block;
+        padding: 8px;
+    }
+
+    .form-control[type="date"]:after {
+        content: url('/assets/img/calender.svg');
+    }
+
+    input[type="datetime-local" i]::-webkit-calendar-picker-indicator {
+        background-image: url('/assets/img/calender.svg');
+        display: block;
+        font-size: 20px;
+    }
+
+    input[type="time" i]::-webkit-calendar-picker-indicator {
+        font-size: 16px;
+        display: block;
+    }
+}
+
+/* Form mControl - Label and INput Type Component ends */
+.btn {
+    border-radius: 4px;
+    padding: 11px;
+    border: 1px solid #8891AA;
+    background-color: #FFF;
+    color: #121C2D;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover {
+        background-color: white;
+        color: #121C2D;
+        border-color: #8891AA;
+    }
+
+    &.btn-primary {
+        border-color: #283897;
+        color: #FFF;
+        background: #283897;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.btn-outline {
+        color: #2A295C;
+        border: 1px solid #8891AA;
+        margin-right: 10px;
+    }
+
+    &.btn-dropdown-crm {
+        width: 100%;
+    }
+}
+
+
+
+
+
+// .btn:hover {
+//     border-color: #8891AA;
+// }
+
+.image-container {
+    border-radius: 4px;
+    border: 1px dashed #8891AA;
+
+    .drop-text {
+        color: #0F0F0F;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .delete-btn {
+        position: relative;
+        left: 50%;
+    }
+
+    .upload-btn-container {
+        color: #283897;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        text-decoration-line: underline;
+    }
+}
+
+.bdr-around{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
