@@ -197,7 +197,7 @@ function ThemePanel() {
                         </div>
                       </div>
                     </div>
-                  </Tab>
+                  </Tab> 
 
                   <Tab eventKey="profile" title="Defect Analysis">
                     
