@@ -94,144 +94,61 @@ function ThemePanel() {
                   id="noanim-tab-example"
                   className="mb-3 "
                 >
-                  <Tab eventKey="home" title="Product">
-                    <CardComponent/>
-                  </Tab>
-
-                  <Tab eventKey="profile" title="Enquiries">
-                    <Card>
-                      <Card.Title>
-                        <div
-                          className={`${EmailModuleScss["top-header"]} d-flex align-items-center box-shadow p-3 py-2`}
-                        >
-                          <div className="d-flex align-items-center me-auto">
-                            <img
-                              src="/assets/img/call-register/enquiry.svg"
-                              alt=""
-                              className={`${EmailModuleScss["add-product-img"]}`}
-                            />
-                            <p
-                              className={`h3 mb-0 ${EmailModuleScss["add-product"]}`}
-                            >
-                              Add Enquiry
-                            </p>
-                          </div>
-                        </div>
-                      </Card.Title>
-                      <Card.Body className="p-0 border-bottom">
-                        <div className="p-3">
-                          <Row>
-                            <div className="col-xl-12 mb-2">
-                              <div
-                                className={`dropdown ${EmailModuleScss["dropdown"]}`}
-                              >
-                                <button
-                                  className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
-                                  type="button"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
-                                >
-                                  <div
-                                    className={`${EmailModuleScss["product-info"]}`}
-                                  >
-                                    <img
-                                      src="/assets/img/call-register/add-product-logo.svg"
-                                      alt=""
-                                    />
-                                    <p mb-0> Product information</p>
-                                  </div>
-                                </button>
-                                <ul className="dropdown-menu w-100">
-                                  <li>
-                                    <a className="dropdown-item" href="#">
-                                      Action
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a className="dropdown-item" href="#">
-                                      Another action
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a className="dropdown-item" href="#">
-                                      Something else here
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div className="col-xl-4 mb-3 ">
-                              <DropdownComponent labelText="Enquiry Level 1" />
-                            </div>
-
-                            <div className="col-xl-4 mb-3 ">
-                              <DropdownComponent labelText="Enquiry Level 2" />
-                            </div>
-
-                            <div className="col-xl-4 mb-3 ">
-                              <DropdownComponent labelText="Enquiry Call Center" />
-                            </div>
-
-                            <div className="col-xl-4 mb-3">
-                              <DropdownComponent labelText="Call Source" />
-                            </div>
-
-                            <div className="col-xl-4 mb-3">
-                              <DropdownComponent labelText="Direction" />
-                            </div>
-
-                            <div className="col-xl-4 mb-3">
-                              <DropdownComponent labelText="Document Type" />
-                            </div>
-
-                            <div className="col-xl-6 mb-3">
-                              <label className="label-text m-auto ">
-                                Customer Remarks
-                              </label>
-                              <input
-                                type="text"
-                                className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                                placeholder="Enter Remarks"
-                              />
-                            </div>
-
-                            <div className="col-xl-6 mb-3">
-                              <label
-                                className={`${EmailModuleScss["label-text"]} m-auto`}
-                              >
-                                Remarks
-                              </label>
-                              <input
-                                type="text"
-                                className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                                placeholder=" Remarks"
-                              />
-                            </div>
-                            <div className="col-xl-12 d-flex justify-content-center">
-                              <button
-                                className={`${EmailModuleScss["btn3"]} ms-3 ${EmailModuleScss["reset"]}`}
-                              >
-                                Reset
-                              </button>
-                              <button
-                                className={`${EmailModuleScss["btn4"]} ${EmailModuleScss["submit"]}`}
-                              >
-                                Submit
-                              </button>
-                            </div>
-                          </Row>
-                        </div>
-                      </Card.Body>
-                    </Card>
-                  </Tab>
-
-                  <Tab>
-                    <div
-                      className={`${EmailModuleScss["main-box-form-input"]} ps-2`}
+                  <Tab eventKey="home" title="Router Details">
+                    {/* <CardComponent/> */}
+					<div
+                      className= "router-details ps-2"
                     >
                       <div className={`${EmailModuleScss["add-enquiry"]}`}>
+						
                         <div className="row">
+						<div className="col-xl-6 mb-3">
+                                <label
+                                  className={`${EmailModuleScss["label-text"]} m-auto`}
+                                >
+                                  Remarks
+                                </label>
+                                <input
+                                  type="text"
+                                  className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                                  placeholder=" Remarks"
+                                />
+                              </div>
                           <div className="p-3">
+						  <div className="col-xl-6 mb-3">
+                                <label
+                                  className={`${EmailModuleScss["label-text"]} m-auto`}
+                                >
+                                  Remarks
+                                </label>
+                                <input
+                                  type="text"
+                                  className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                                  placeholder=" Remarks"
+                                />
+                              </div><div className="col-xl-6 mb-3">
+                                <label
+                                  className={`${EmailModuleScss["label-text"]} m-auto`}
+                                >
+                                  Remarks
+                                </label>
+                                <input
+                                  type="text"
+                                  className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                                  placeholder=" Remarks"
+                                />
+                              </div><div className="col-xl-6 mb-3">
+                                <label
+                                  className={`${EmailModuleScss["label-text"]} m-auto`}
+                                >
+                                  Remarks
+                                </label>
+                                <input 
+                                  type="text"
+                                  className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
+                                  placeholder=" Remarks"
+                                />
+                              </div>
                             <div className="row">
                               <div className="col-xl-12 mb-2">
                                 <div
@@ -272,267 +189,38 @@ function ThemePanel() {
                                   </ul>
                                 </div>
                               </div>
-                              <div className="col-xl-4 mb-3 ">
-                                <label
-                                  className={`${EmailModuleScss["label-text"]} m-auto`}
-                                >
-                                  Enquiry level 1
-                                </label>
-                                <div
-                                  className={` dropdown ${EmailModuleScss["dropdown"]}`}
-                                >
-                                  <button
-                                    className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
-                                    type="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                  >
-                                    -select-
-                                  </button>
-                                  <ul className="dropdown-menu w-100">
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Another action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Something else here
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div className="col-xl-4 mb-3 ">
-                                <label
-                                  className={`${EmailModuleScss["label-text"]} m-auto`}
-                                >
-                                  Enquiry level 2
-                                </label>
-                                <div
-                                  className={`dropdown ${EmailModuleScss["dropdown"]}`}
-                                >
-                                  <button
-                                    className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
-                                    type="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                  >
-                                    -select-
-                                  </button>
-                                  <ul className="dropdown-menu w-100">
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Another action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Something else here
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div className="col-xl-4 mb-3 ">
-                                <label
-                                  className={`${EmailModuleScss["label-text"]} m-auto`}
-                                >
-                                  Enquiry Call Centre
-                                </label>
-                                <div
-                                  className={`dropdown ${EmailModuleScss["dropdown"]}`}
-                                >
-                                  <button
-                                    className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
-                                    type="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                  >
-                                    -select-
-                                  </button>
-                                  <ul className="dropdown-menu w-100">
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Another action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Something else here
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                              <div className="col-xl-4 mb-3">
-                                <label
-                                  className={`${EmailModuleScss["label-text"]} m-auto`}
-                                >
-                                  Call Source
-                                </label>
-                                <div
-                                  className={`dropdown ${EmailModuleScss["dropdown"]}`}
-                                >
-                                  <button
-                                    className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
-                                    type="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                  >
-                                    -select-
-                                  </button>
-                                  <ul className="dropdown-menu w-100">
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Another action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Something else here
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div className="col-xl-4 mb-3">
-                                <label
-                                  className={`${EmailModuleScss["label-text"]} m-auto`}
-                                >
-                                  Direction
-                                </label>
-                                <div
-                                  className={`dropdown ${EmailModuleScss["dropdown"]}`}
-                                >
-                                  <button
-                                    className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
-                                    type="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                  >
-                                    -select-
-                                  </button>
-                                  <ul className="dropdown-menu w-100">
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Another action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Something else here
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                              <div className="col-xl-4 mb-3">
-                                <label
-                                  className={`${EmailModuleScss["label-text"]} m-auto`}
-                                >
-                                  Document type
-                                </label>
-                                <div
-                                  className={`dropdown ${EmailModuleScss["dropdown"]}`}
-                                >
-                                  <button
-                                    className={`btn ${EmailModuleScss["dropdown-toggle"]} w-100 `}
-                                    type="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                  >
-                                    -select-
-                                  </button>
-                                  <ul className="dropdown-menu w-100">
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Another action
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a className="dropdown-item" href="#">
-                                        Something else here
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                              <div className="col-xl-6 mb-3">
-                                <label className="label-text m-auto ">
-                                  Customer Remarks
-                                </label>
-                                <input
-                                  type="text"
-                                  className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                                  placeholder="Enter Remarks"
-                                />
-                              </div>
-
-                              <div className="col-xl-6 mb-3">
-                                <label
-                                  className={`${EmailModuleScss["label-text"]} m-auto`}
-                                >
-                                  Remarks
-                                </label>
-                                <input
-                                  type="text"
-                                  className={`form-control d-flex ${EmailModuleScss["customer-remarks"]}`}
-                                  placeholder=" Remarks"
-                                />
-                              </div>
+                                                            
                             </div>
                           </div>
 
-                          <div className={`${EmailModuleScss["down-buttons"]}`}>
-                            <button
-                              className={`${EmailModuleScss["btn3"]} ${EmailModuleScss["reset"]}`}
-                            >
-                              Reset
-                            </button>
-                            <button
-                              className={`${EmailModuleScss["btn4"]} ${EmailModuleScss["submit"]}`}
-                            >
-                              Submit
-                            </button>
-                          </div>
+                       
                         </div>
                       </div>
                     </div>
                   </Tab>
+
+                  <Tab eventKey="profile" title="Defect Analysis">
+                    
+                        <div
+                          className={`defect-analysis d-flex align-items-center box-shadow p-3 py-2`}
+                        >
+                          <div className="d-flex align-items-center me-auto">
+                            <img
+                              src="/assets/img/call-register/enquiry.svg"
+                              alt=""
+                              className={`${EmailModuleScss["add-product-img"]}`}
+                            />
+                            <p
+                              className={`h3 mb-0 ${EmailModuleScss["add-product"]}`}
+                            >
+                              Add Enquiry
+                            </p>
+                          </div>
+                        </div>
+                    
+                  </Tab>
+
+                 
                 </Tabs>
               </div>
 						</div>
