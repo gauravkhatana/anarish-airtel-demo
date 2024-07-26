@@ -16,6 +16,10 @@ $theme-panel-width: _rem(400px);
 		left: -$theme-panel-width;
 		transition: left .2s linear;
 	}
+
+	.form-control{
+		height: fit-content;
+	}
 	
 	& .theme-list {
 		margin-bottom: _rem(-4px);
