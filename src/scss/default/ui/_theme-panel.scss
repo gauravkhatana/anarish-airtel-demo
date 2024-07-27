@@ -81,12 +81,13 @@ $theme-panel-width: _rem(400px);
 					background-color: #F8F9FA;
 					box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 				}
+
 				&:focus {
 					box-shadow: none;
 				}
 			}
 
-			
+
 		}
 
 		.accordion-body {
@@ -163,6 +164,123 @@ $theme-panel-width: _rem(400px);
 			}
 		}
 	}
+
+	.tree {
+		position: relative;
+		padding-left: 20px;
+	  
+		ul {
+		  list-style-type: none;
+		  padding: 0;
+		  margin: 0;
+		  position: relative;
+	  
+		  li {
+			position: relative;
+			margin: 5px 0;
+			// padding-left: 20px; /* Extra space for lines */
+	  
+			&:before,
+			&:after {
+			  content: "";
+			  position: absolute;
+			  left: -20px; /* Adjust as needed */
+			}
+	  
+			&:before {
+			  background: #343A40;
+			  top: 12px;
+			  width: 16px;
+			  height: 1px;
+			  z-index: 1; /* Ensure lines are on top of other content */
+			}
+	  
+			&:after {
+			  background: #343A40;
+			  top: -4px;
+			  width: 1px;
+			  height: 100%; /* Ensure it extends to the bottom of the li */
+			  z-index: 0; /* Ensure lines are behind other content */
+			}
+			&:first-child:after {
+				top: -4px;
+				height: 40px;
+			}
+	  
+			&.parent:after {
+			  top: 12px; /* Adjust to align with the horizontal line */
+			  height: calc(100% + 5px); /* Extend the vertical line through the entire height of the li */
+			}
+	  
+			&.parent:last-child:after {
+				content: none;
+			  height: calc(100% + 5px);
+			  top: 12px;
+			  border-left: none; /* Remove the vertical line for the last child */
+			}
+	  
+			details {
+			  margin: 0;
+			  
+			  summary {
+				display: block;
+				position: relative;
+				cursor: pointer;
+				padding-left: 20px; /* Align text with lines */
+				background: #f8f9fa; /* Optional: background color for summary */
+				border: 1px solid #dee2e6; /* Optional: border for summary */
+				border-radius: 4px; /* Optional: rounded corners for summary */
+				padding: 5px; /* Optional: padding for summary */
+				margin-bottom: 5px; /* Optional: margin below summary */
+			  }
+	  
+			  &[open] summary {
+				background: #e9ecef; /* Optional: change background color when expanded */
+			  }
+	  
+			  > ul {
+				padding-left: 35px;
+				margin-top: 5px;
+	  
+				li {
+				  position: relative;
+	  
+				  &:before {
+					content: "";
+					position: absolute;
+					left: -20px;
+					top: 12px; /* Ensure alignment with parent's horizontal line */
+					width: 16px;
+					height: 1px;
+					background: #343A40;
+				  }
+	  
+				  &:after {
+					content: "";
+					position: absolute;
+					left: -20px;
+					top: 12px; /* Align vertical line with horizontal line */
+					width: 1px;
+					height: calc(100% + 5px);
+					background: #343A40;
+				  }
+	  
+				  &:last-child:after {
+					content: none;
+					height: calc(100% + 5px);
+					top: 12px;
+					border-left: none; /* Remove the vertical line for the last child */
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	  
+	  
+
+
 
 	& .theme-collapse-btn {
 		position: absolute;

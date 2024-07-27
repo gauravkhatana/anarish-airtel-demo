@@ -383,6 +383,55 @@ function ThemePanel() {
                       </p>
                     </div>
                   </div>
+                  <div className="tree">
+                    <ul>
+                      <li className="parent">
+                        <details>
+                          <summary>Parent 1</summary>
+                          <ul>
+                            <li>Child 1.2</li>
+                            <li className="parent">
+                              <details>
+                                <summary>Child 1.1</summary>
+                                <ul>
+                                  <li>Grandchild 1.1.1</li>
+                                  <li>Grandchild 1.1.2</li>
+                                  <li>Grandchild 1.1.2</li>
+                                  <li>Grandchild 1.1.2</li>
+                                  <li>Grandchild 1.1.2</li>
+                                </ul>
+                              </details>
+                            </li>
+                            
+                            <li>Child 1.2</li>
+                            <li>Child 1.2</li>
+                          </ul>
+                        </details>
+                      </li>
+                      <li className="parent">
+                        <details>
+                          <summary>Parent 2</summary>
+                          <ul>
+                            <li>Child 2.1</li>
+                            <li>Child 2.1</li>
+                            <li className="parent">
+                              <details>
+                                <summary>Child 2.2</summary>
+                                <ul>
+                                  <li>Grandchild 2.2.1</li>
+                                  <li>Grandchild 2.2.1</li>
+                                  <li>Grandchild 2.2.1</li>
+                                  <li>Grandchild 2.2.1</li>
+                                  <li>Grandchild 2.2.1</li>
+                                  <li>Grandchild 2.2.1</li>
+                                </ul>
+                              </details>
+                            </li>
+                          </ul>
+                        </details>
+                      </li>
+                    </ul>
+                  </div>
                 </Tab>
               </Tabs>
             </div>
