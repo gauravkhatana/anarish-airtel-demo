@@ -18,7 +18,7 @@
 
 }
 
-.nav-map {
+#nav-map {
 
 	position: absolute;
 	height: 90px;
@@ -28,7 +28,7 @@
 	gap: 24px;
 	// font-family: Manrope;
 
-	.buttons {
+	.buttons { 
 		border-radius: 2rem;
 		background-color: white;
 		width: fit-content;
@@ -93,16 +93,20 @@
 		display: flex;
 		gap: 12px;
 
-		.btn-e {
+		.btn-e,.btn {
 			padding: 4px 8px;
 			border-radius: 1rem;
 			border: none;
 			transition: all .4s ease-in-out;
 			background-color: white;
+			svg{path{fill:#354ACB}}
 
 			&.active {
 				background-color: #354ACB;
 				color: white;
+				svg{
+					path{fill:white;}
+				}
 
 				i {
 					color: white;

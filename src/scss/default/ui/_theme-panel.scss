@@ -17,8 +17,40 @@ $theme-panel-width: _rem(400px);
 		transition: left .2s linear;
 	}
 
+	.close{
+		position: absolute;
+		right: 36px;
+		top: 26px;
+		font-size: 14px;
+		cursor: pointer;
+	}
+
 	.form-control {
 		height: fit-content;
+	}
+
+	.circle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		height: 30px;
+		font-size: 16px;
+		color: white;
+		background-color: #007aff;
+		aspect-ratio: 1/1;
+
+		&.danger {
+			background-color: #F03800;
+			fill: #F03800;
+			height: 20px;
+		}
+
+		&.blue {
+			background-color: #FFFFFF;
+			border: solid 2px #007aff;
+			height: 25px;
+		}
 	}
 
 	.accordion {
@@ -32,29 +64,7 @@ $theme-panel-width: _rem(400px);
 			line-height: 100%;
 		}
 
-		.circle {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			height: 30px;
-			font-size: 16px;
-			color: white;
-			background-color: #007aff;
-			aspect-ratio: 1/1;
 
-			&.danger {
-				background-color: #F03800;
-				fill: #F03800;
-				height: 20px;
-			}
-
-			&.blue {
-				background-color: #FFFFFF;
-				border: solid 2px #007aff;
-				height: 25px;
-			}
-		}
 
 		.blue:hover {
 			background-color: #007aff;
@@ -167,118 +177,156 @@ $theme-panel-width: _rem(400px);
 
 	.tree {
 		position: relative;
-		padding-left: 20px;
-	  
+
+		.circle {
+			height: 38px;
+			background-color: #354ACB;
+
+		}
+
+		.hd {
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+
+		>ul>li::before {
+			content: none;
+		}
+		
+		.fault {
+			color: #F03800;
+		}
+
 		ul {
-		  list-style-type: none;
-		  padding: 0;
-		  margin: 0;
-		  position: relative;
-	  
-		  li {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
 			position: relative;
-			margin: 5px 0;
-			// padding-left: 20px; /* Extra space for lines */
-	  
-			&:before,
-			&:after {
-			  content: "";
-			  position: absolute;
-			  left: -20px; /* Adjust as needed */
-			}
-	  
-			&:before {
-			  background: #343A40;
-			  top: 12px;
-			  width: 16px;
-			  height: 1px;
-			  z-index: 1; /* Ensure lines are on top of other content */
-			}
-	  
-			&:after {
-			  background: #343A40;
-			  top: -4px;
-			  width: 1px;
-			  height: 100%; /* Ensure it extends to the bottom of the li */
-			  z-index: 0; /* Ensure lines are behind other content */
-			}
-			&:first-child:after {
-				top: -4px;
-				height: 40px;
-			}
-	  
-			&.parent:after {
-			  top: 12px; /* Adjust to align with the horizontal line */
-			  height: calc(100% + 5px); /* Extend the vertical line through the entire height of the li */
-			}
-	  
-			&.parent:last-child:after {
-				content: none;
-			  height: calc(100% + 5px);
-			  top: 12px;
-			  border-left: none; /* Remove the vertical line for the last child */
-			}
-	  
-			details {
-			  margin: 0;
-			  
-			  summary {
-				display: block;
+			font-feature-settings: 'clig' off, 'liga' off;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 150%;
+
+
+			li {
 				position: relative;
-				cursor: pointer;
-				padding-left: 20px; /* Align text with lines */
-				background: #f8f9fa; /* Optional: background color for summary */
-				border: 1px solid #dee2e6; /* Optional: border for summary */
-				border-radius: 4px; /* Optional: rounded corners for summary */
-				padding: 5px; /* Optional: padding for summary */
-				margin-bottom: 5px; /* Optional: margin below summary */
-			  }
-	  
-			  &[open] summary {
-				background: #e9ecef; /* Optional: change background color when expanded */
-			  }
-	  
-			  > ul {
-				padding-left: 35px;
-				margin-top: 5px;
-	  
-				li {
-				  position: relative;
-	  
-				  &:before {
+				margin: 5px 0;
+				// padding-left: 20px; /* Extra space for lines */
+
+				&:before:not(.head),
+				&:after {
 					content: "";
 					position: absolute;
 					left: -20px;
-					top: 12px; /* Ensure alignment with parent's horizontal line */
-					width: 16px;
+					/* Adjust as needed */
+				}
+
+				&:before {
+					background: #98A0A5;
+					top: 12px;
+					width: 18px;
 					height: 1px;
-					background: #343A40;
-				  }
-	  
-				  &:after {
-					content: "";
-					position: absolute;
-					left: -20px;
-					top: 12px; /* Align vertical line with horizontal line */
+					z-index: 1;
+					/* Ensure lines are on top of other content */
+				}
+
+				&:after {
+					background: #98A0A5;
+					top: -4px;
 					width: 1px;
+					height: 100%;
+					z-index: 0;
+				}
+
+				&:first-child:after {
+					top: -4px;
+					height: 42px;
+				}
+
+				&.parent:after {
+					top: 12px;
 					height: calc(100% + 5px);
-					background: #343A40;
-				  }
-	  
-				  &:last-child:after {
+				}
+
+				&.parent:last-child:after {
 					content: none;
 					height: calc(100% + 5px);
 					top: 12px;
-					border-left: none; /* Remove the vertical line for the last child */
-				  }
+					border-left: none;
 				}
-			  }
+
+				details {
+					margin: 0;
+
+					summary {
+						display: block;
+						position: relative;
+						cursor: pointer;
+						padding-left: 20px;
+						background: rgba(53, 74, 203, 0.2);
+						border-radius: 4px;
+						padding: 5px;
+						margin-bottom: 5px;
+
+						.fault{
+								background: rgba(240, 56, 0, 0.2);
+
+						}
+					}
+
+					&[open] summary {
+						background: rgba(53, 74, 203, 0.2);
+						&.fault{
+							background: rgba(240, 56, 0, 0.2);
+						}
+					}
+
+					>ul {
+						padding-left: 35px;
+						margin-top: 5px;
+
+						li {
+							position: relative;
+
+							&:before {
+								content: "";
+								position: absolute;
+								left: -23px;
+								top: 12px;
+								/* Ensure alignment with parent's horizontal line */
+								width: 20px;
+								height: 1px;
+								background: #98A0A5;
+							}
+
+							&:after {
+								content: "";
+								position: absolute;
+								left: -23px;
+								top: 12px;
+								/* Align vertical line with horizontal line */
+								width: 1px;
+								height: calc(100% + 5px);
+								background: #98A0A5;
+							}
+
+							&:last-child:after {
+								content: none;
+								height: calc(100% + 5px);
+								top: 12px;
+								border-left: none;
+								/* Remove the vertical line for the last child */
+							}
+						}
+					}
+				}
 			}
-		  }
 		}
-	  }
-	  
-	  
+	}
+
+
 
 
 

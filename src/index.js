@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, useRoutes } from "react-router-dom";
 import AppRoute from './config/app-route.jsx';
 
-// bootstrap
-import 'bootstrap';
 
 // css
-import '@fortawesome/fontawesome-free/css/all.css';
-import 'react-perfect-scrollbar/dist/css/styles.css';
 import './index.css';
 import './scss/react.scss';
+import '@fortawesome/fontawesome-free/css/all.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+// bootstrap
+import 'bootstrap';
 import 'bootstrap-social/bootstrap-social.css';
 
 

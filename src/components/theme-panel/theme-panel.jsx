@@ -24,6 +24,7 @@ function ThemePanel() {
       ? localStorage.appTheme
       : "teal"
   );
+  const fault = false;
   const themeList = [
     "red",
     "pink",
@@ -122,6 +123,7 @@ function ThemePanel() {
             data-height="100%"
           >
             <div className="mx-4 my-3 ">
+            <div className="close" onClick={(e) => toggleExpand(e)}><i class="fa-solid fa-x"></i></div> 
               <Tabs
                 defaultActiveKey="home"
                 transition={false}
@@ -367,72 +369,81 @@ function ThemePanel() {
                 </Tab>
 
                 <Tab eventKey="profile" title="Defect Analysis">
-                  <div
-                    className={`defect-analysis d-flex align-items-center box-shadow p-3 py-2`}
-                  >
-                    <div className="d-flex align-items-center me-auto">
-                      <img
-                        src="/assets/img/call-register/enquiry.svg"
-                        alt=""
-                        className={`${EmailModuleScss["add-product-img"]}`}
-                      />
-                      <p
-                        className={`h3 mb-0 ${EmailModuleScss["add-product"]}`}
-                      >
-                        Add Enquiry
-                      </p>
-                    </div>
-                  </div>
                   <div className="tree">
-                    <ul>
-                      <li className="parent">
+                    <ul className={`${fault ?'fault':'' } `}>
+                      <li className="parent head">
                         <details>
-                          <summary>Parent 1</summary>
+                          <summary className={`${fault ?'fault':'' } `}>
+                            <div className="d-flex align-items-center">
+                              <div className="circle  me-3">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="27"
+                                  height="26"
+                                  viewBox="0 0 27 26"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M9.30834 15.2749L9.40583 15.1774C9.69833 14.8849 9.7525 14.4082 9.4925 14.0832C8.72334 13.0974 8.33334 11.9274 8.33334 10.8332C8.33334 9.66323 8.7125 8.49323 9.46 7.57239C9.73084 7.24739 9.6875 6.75989 9.38417 6.46739L9.30834 6.39156C8.94 6.02323 8.33334 6.06656 8.00833 6.47823C7.0225 7.75656 6.49167 9.29489 6.49167 10.8332C6.49167 12.3716 7.0225 13.9099 8.00833 15.1882C8.33334 15.5999 8.94 15.6432 9.30834 15.2749ZM20.8025 3.78073L20.7158 3.86739C20.3908 4.19239 20.4017 4.69073 20.6833 5.03739C22.0483 6.69489 22.7417 8.80739 22.7417 10.8332C22.7417 12.8591 22.0592 14.9607 20.6833 16.6291C20.38 16.9866 20.4342 17.5282 20.77 17.8641C21.1492 18.2432 21.7775 18.1999 22.1133 17.7882C23.8142 15.7516 24.5833 13.3357 24.5833 10.8332C24.5833 8.31989 23.7275 5.90406 22.0808 3.86739C21.7558 3.46656 21.16 3.42323 20.8025 3.78073Z"
+                                    fill="white"
+                                  />
+                                  <path
+                                    d="M6.78416 3.86739L6.69749 3.78073C6.33999 3.42323 5.74416 3.46656 5.41916 3.86739C3.77249 5.90406 2.91666 8.31989 2.91666 10.8332C2.91666 13.3466 3.77249 15.7624 5.41916 17.7991C5.74416 18.1999 6.33999 18.2541 6.69749 17.8857L6.78416 17.7991C7.10916 17.4741 7.09832 16.9757 6.81666 16.6291C5.44082 14.9607 4.75832 12.8591 4.75832 10.8332C4.75832 8.80739 5.44082 6.70573 6.81666 5.03739C7.09832 4.69073 7.10916 4.19239 6.78416 3.86739ZM18.1592 15.2424C18.5492 15.6324 19.1883 15.5891 19.5242 15.1449C20.4992 13.8666 21.0083 12.3499 21.0083 10.8332C20.9217 9.30573 20.4558 7.76739 19.4917 6.48906C19.4178 6.38996 19.3236 6.30786 19.2153 6.24832C19.1069 6.18879 18.9871 6.15319 18.8639 6.14395C18.7406 6.13471 18.6168 6.15203 18.5009 6.19475C18.3849 6.23746 18.2795 6.30458 18.1917 6.39156L18.105 6.47823C17.8125 6.77073 17.7583 7.24739 18.0183 7.57239C18.7767 8.56906 19.1667 9.73906 19.1667 10.8332C19.1667 11.9924 18.7983 13.1407 18.0725 14.0616C17.7908 14.4082 17.8342 14.9174 18.1592 15.2424ZM16.4583 10.8332C16.4583 9.09989 14.8225 7.74573 13.0133 8.22239C12.1467 8.44989 11.4317 9.14323 11.1717 10.0099C10.825 11.1582 11.2367 12.2199 11.995 12.8699L8.78832 22.4791C8.56082 23.1507 9.05916 23.8332 9.76332 23.8332C10.2075 23.8332 10.5975 23.5516 10.7383 23.1291L11.2258 21.6666H16.285L16.7725 23.1291C16.8125 23.2603 16.8784 23.3823 16.9663 23.4877C17.0542 23.5931 17.1623 23.6798 17.2843 23.7428C17.4062 23.8057 17.5396 23.8436 17.6764 23.8543C17.8132 23.8649 17.9508 23.848 18.081 23.8046C18.2112 23.7612 18.3314 23.6921 18.4345 23.6016C18.5376 23.511 18.6215 23.4007 18.6813 23.2771C18.7411 23.1536 18.7755 23.0193 18.7826 22.8822C18.7897 22.7452 18.7692 22.6081 18.7225 22.4791L15.5158 12.8699C16.09 12.3716 16.4583 11.6566 16.4583 10.8332ZM11.9408 19.4999L13.75 14.0832L15.5592 19.4999H11.9408Z"
+                                    fill="white"
+                                  />
+                                </svg>
+                              </div>{" "}
+                              <div className="heading d-flex flex-column">
+                                <h3 className="hd mb-0">RSU</h3>
+                                <div>( OLT - Collected )</div>
+                              </div>
+                            </div>
+                          </summary>
                           <ul>
-                            <li>Child 1.2</li>
+                            <li>OLT 1</li>
+                            <li>OLT 2</li>
                             <li className="parent">
                               <details>
-                                <summary>Child 1.1</summary>
+                                <summary className={`${fault ?'fault':'' } `}>OLT 3</summary>
                                 <ul>
-                                  <li>Grandchild 1.1.1</li>
-                                  <li>Grandchild 1.1.2</li>
-                                  <li>Grandchild 1.1.2</li>
-                                  <li>Grandchild 1.1.2</li>
-                                  <li>Grandchild 1.1.2</li>
+                                  <li>ODF 1</li>
+                                  <li>ODF 2</li>
+                                  <li className="parent">
+                                    <details>
+                                      <summary className={`${fault ?'fault':'' } `}>ODF 3</summary>
+                                      <ul>
+                                        <li>FAT 1</li>
+                                        <li>FAT 2</li>
+                                        <li className="parent">
+                                          <details>
+                                            <summary className={`${fault ?'fault':'' } `}>FAT 3</summary>
+                                            <ul>
+                                              <li>012367058_DSL</li>
+                                              <li>012367058_DSL</li>
+                                              <li>012367058_DSL</li>
+                                              <li>012367058_DSL</li>
+                                              <li>012367058_DSL</li>
+                                            </ul>
+                                          </details>
+                                        </li>
+                                      </ul>
+                                    </details>
+                                  </li>
+                                  <li>ODF 4</li>
+                                  <li>ODF 5</li>
                                 </ul>
                               </details>
                             </li>
-                            
-                            <li>Child 1.2</li>
-                            <li>Child 1.2</li>
-                          </ul>
-                        </details>
-                      </li>
-                      <li className="parent">
-                        <details>
-                          <summary>Parent 2</summary>
-                          <ul>
-                            <li>Child 2.1</li>
-                            <li>Child 2.1</li>
-                            <li className="parent">
-                              <details>
-                                <summary>Child 2.2</summary>
-                                <ul>
-                                  <li>Grandchild 2.2.1</li>
-                                  <li>Grandchild 2.2.1</li>
-                                  <li>Grandchild 2.2.1</li>
-                                  <li>Grandchild 2.2.1</li>
-                                  <li>Grandchild 2.2.1</li>
-                                  <li>Grandchild 2.2.1</li>
-                                </ul>
-                              </details>
-                            </li>
+                            <li>OLT 4</li>
+                            <li>OLT 5</li>
                           </ul>
                         </details>
                       </li>
                     </ul>
                   </div>
                 </Tab>
+              
+
               </Tabs>
             </div>
           </div>
