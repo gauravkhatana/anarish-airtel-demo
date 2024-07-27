@@ -24,7 +24,7 @@ function ThemePanel() {
       ? localStorage.appTheme
       : "teal"
   );
-  const fault = false;
+  const fault = true;
   const themeList = [
     "red",
     "pink",
