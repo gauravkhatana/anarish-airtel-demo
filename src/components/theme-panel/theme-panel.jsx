@@ -18,7 +18,6 @@ import {
 
 function ThemePanel() {
   const context = useContext(AppSettings);
-  const [expand, setExpand] = useState(false);
   const [theme, setTheme] = useState(
     localStorage && typeof localStorage.appTheme !== "undefined"
       ? localStorage.appTheme
@@ -90,7 +89,7 @@ function ThemePanel() {
 
   function toggleExpand(e) {
     e.preventDefault();
-    setExpand(!expand);
+    context.setExpand(!context.expand);
   }
 
   function toggleTheme(e, theme) {
@@ -109,14 +108,7 @@ function ThemePanel() {
         appSidebarGrid,
         appGradientEnabled,
       }) => (
-        <div className={"theme-panel " + (expand ? "active" : "")}>
-          <a
-            href="#0"
-            onClick={(e) => toggleExpand(e)}
-            className="theme-collapse-btn"
-          >
-            <i class="fa-solid fa-tower-cell"></i>
-          </a>
+        <div className={"theme-panel " + (context.expand ? "active" : "")}>
           <div
             className="theme-panel-content"
             data-scrollbar="true"

@@ -10,6 +10,7 @@ import Content from './components/content/content.jsx';
 import ThemePanel from './components/theme-panel/theme-panel.jsx';
 
 function App() {	
+	const [expand,setExpand] = useState(false);
 	const [appTheme] = useState('');
 	const [appDarkMode, setAppDarkMode] = useState(false);
 	const [appGradientEnabled, setAppGradientEnabled] = useState(false);
@@ -240,6 +241,8 @@ function App() {
 	return (
 		<AppSettings.Provider
 			value={{
+				expand,
+				setExpand,
 				appTheme,
 				appDarkMode,
 				appGradientEnabled,

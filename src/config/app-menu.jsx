@@ -1,18 +1,7 @@
 const Menu = [
-  { path: '/email', icon: 'fa-regular fa-bookmark', img: '', title: 'lorem epsum', 
-    children: [
-      { path: '/email/inbox',img: '/assets/img/shared-img/call1.svg', title: 'lorem epsum' },
-      { path: '/email/detail',img: '/assets/img/shared-img/call2.svg', title: 'lorem epsum' },
-      { path: '/email/inbox',img: '/assets/img/shared-img/call3.svg', title: 'lorem epsum' },
-      { path: '/email/inbox',img: '/assets/img/shared-img/call4.svg', title: 'lorem epsum' },
-      { path: '/email/inbox',img: '/assets/img/shared-img/call4.svg', title: 'lorem epsum' },
-    ]
+  { path: '/', icon: 'fa-regular fa-bookmark', img: '', title: 'Alarms', 
   },
-  { path: '/email', icon: 'fa-solid fa-clock-rotate-left', img: '', title: 'lorem epsum',
-    children: [
-      { path: '/email/inbox',img: '/assets/img/shared-img/challan1.svg', title: 'lorem epsum' },
-      { path: '/email/inbox',img: '/assets/img/shared-img/challan2.svg', title: 'lorem epsum' },
-    ]
+  { path: '/', icon: 'fa-solid fa-clock-rotate-left', img: '', title: 'Experience',
   },
   // { path: '/email', img: '/assets/img/shared-img/inventory.svg', title: 'Inventory',
   //   children: [ 
